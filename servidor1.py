@@ -1,4 +1,3 @@
-
 import pandas as pd
 import time
 import requests
@@ -14,7 +13,6 @@ def general():
     modificacionArchivo7()
     modificacionArchivo8()
     modificacionArchivo9()
-    descargas()
 
 def lecturaArchivos():
     df1996 = pd.read_excel(r"Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_1996.xlsx")
@@ -43,8 +41,36 @@ def lecturaArchivos():
     df2019 = pd.read_excel(r"Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2019.xlsx")
     df2020 = pd.read_excel(r"Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2020.xlsx")
     df2021 = pd.read_excel(r"Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2021.xlsx")
+    return df1996, df1997, df1998, df1999, df2000, df2001, df2002, df2003, df2004, df2005, df2006, df2007, df2008, df2009, df2010, df2011, df2012, 
+    df2012, df2013, df2014, df2015, df2016, df2017, df2018, df2019, df2020, df2021
 
 def modificacionArchivo1():
+    df1996 = lecturaArchivos()
+    df1997 = lecturaArchivos()
+    df1998 = lecturaArchivos()
+    df1999 = lecturaArchivos()
+    df2000 = lecturaArchivos()
+    df2001 = lecturaArchivos()
+    df2002 = lecturaArchivos()
+    df2003 = lecturaArchivos()
+    df2004 = lecturaArchivos()
+    df2005 = lecturaArchivos()
+    df2006 = lecturaArchivos()
+    df2007 = lecturaArchivos()
+    df2008 = lecturaArchivos()
+    df2009 = lecturaArchivos()
+    df2010 = lecturaArchivos()
+    df2011 = lecturaArchivos()
+    df2012 = lecturaArchivos()
+    df2013 = lecturaArchivos()
+    df2014 = lecturaArchivos()
+    df2015 = lecturaArchivos()
+    df2016 = lecturaArchivos()
+    df2017 = lecturaArchivos()
+    df2018 = lecturaArchivos()
+    df2019 = lecturaArchivos()
+    df2020 = lecturaArchivos()
+    df2021 = lecturaArchivos()
     df1996["Año"] = "1996"
     df1997["Año"] = "1997"
     df1998["Año"] = "1998"
@@ -73,12 +99,43 @@ def modificacionArchivo1():
     df2021["Año"] = "2021"
 
 def modificacionArchivo2():
+    df1996 = lecturaArchivos()
+    df1997 = lecturaArchivos()
+    df1998 = lecturaArchivos()
+    df1999 = lecturaArchivos()
+    df2000 = lecturaArchivos()
+    df2001 = lecturaArchivos()
+    df2002 = lecturaArchivos()
+    df2003 = lecturaArchivos()
+    df2004 = lecturaArchivos()
+    df2005 = lecturaArchivos()
+    df2006 = lecturaArchivos()
+    df2007 = lecturaArchivos()
+    df2008 = lecturaArchivos()
+    df2009 = lecturaArchivos()
+    df2010 = lecturaArchivos()
+    df2011 = lecturaArchivos()
+    df2012 = lecturaArchivos()
+    df2013 = lecturaArchivos()
+    df2014 = lecturaArchivos()
+    df2015 = lecturaArchivos()
+    df2016 = lecturaArchivos()
+    df2017 = lecturaArchivos()
+    df2018 = lecturaArchivos()
+    df2019 = lecturaArchivos()
+    df2020 = lecturaArchivos()
+    df2021 = lecturaArchivos()
+
     dfFinal = pd.concat([df1996,df1997,df1998,df1999,df2000,df2001,df2002,df2003,df2004,df2005,df2006,df2007,df2008,df2009,df2010,df2011,df2012,df2013,df2014,df2015,df2016,df2017,df2018,df2019,df2020,df2021])
+    return dfFinal
 
 def modificacionArchivo3():
+    dfFinal = modificacionArchivo2()
     dfFinal["Mes"] = dfFinal["fecha"].apply(lambda x: str(x)[4:6])
+    return dfFinal
 
 def modificacionArchivo4():
+    dfFinal = modificacionArchivo3()
     del dfFinal['nemotecnico_del_instrumento']
     del dfFinal['unidades']
     del dfFinal['inversion']
@@ -88,26 +145,34 @@ def modificacionArchivo4():
     del dfFinal['tasa_pactada_del_fondo_swap']
     del dfFinal['tasa_pactada_de_la_contraparte_s']
     del dfFinal['fecha']
+    return dfFinal
 
 def modificacionArchivo5():
+    dfFinal = modificacionArchivo4()
     dfFinal["grupo_economico"] =dfFinal["grupo_economico"].fillna("")
     dfFinal["nacionalidad_del_emisor"] =dfFinal["nacionalidad_del_emisor"].fillna("")
+    return dfFinal
 
 def modificacionArchivo6():
+    dfFinal = modificacionArchivo5()
     dfGroup = dfFinal.groupby(['afp', 'tipo_de_fondo', 'tipo_de_instrumento',
        'nombre_del_emisor', 'nacionalidad_del_emisor',
        'unidad_de_reajuste_de_moneda', 'grupo_economico',
        'moneda_objeto_forward', 'Año', 'Mes']).mean()
     dfGroup = dfGroup.reset_index()
+    return dfGroup
 
 def modificacionArchivo7():
+    dfGroup = modificacionArchivo6()
     dfpivot = dfGroup.pivot( index=[ 'afp', 'tipo_de_fondo', 'tipo_de_instrumento',
        'nombre_del_emisor', 'nacionalidad_del_emisor',
        'unidad_de_reajuste_de_moneda', 'grupo_economico',
        'moneda_objeto_forward', 'Año'],columns=['Mes'], values='precio')
     dfpivot = dfpivot.reset_index()
+    return dfpivot
 
 def modificacionArchivo8():
+    dfpivot = modificacionArchivo7()
     dfpivot["Enero"] = dfpivot["01"]
     dfpivot["Febrero"] = dfpivot["02"]
     dfpivot["Marzo"] = dfpivot["03"]
@@ -120,21 +185,12 @@ def modificacionArchivo8():
     dfpivot["Octubre"] = dfpivot["10"]
     dfpivot["Noviembre"] = dfpivot["11"]
     dfpivot["Diciembre"] = dfpivot["12"]
+    return dfpivot
 
 def modificacionArchivo9():
+    dfpivot = modificacionArchivo8()
     dfpivot.to_excel("Consolidado.xlsx", index=False)
 
-def descargas():
-    lecturaArchivos()
-    modificacionArchivo1()
-    modificacionArchivo2()
-    modificacionArchivo3()
-    modificacionArchivo4()
-    modificacionArchivo5()
-    modificacionArchivo6()
-    modificacionArchivo7()
-    modificacionArchivo8()
-    modificacionArchivo9()
 
 
 
