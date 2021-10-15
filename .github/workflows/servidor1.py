@@ -138,4 +138,7 @@ def descargas():
 
 
 if __name__ == '__main__':
-    general()
+    #general()
+    f = open ('holamundo.txt','w')
+    f.write('hola mundo')
+    f.close()
