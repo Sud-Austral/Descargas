@@ -4,6 +4,17 @@ import requests
 
 def general():
     descarga()
+    dataSinModificacion(url, ruta)
+    dataSinModificacion2(url, ruta)
+    lecturaFuente()
+    modificacionArchivo1()
+    modificacionArchivo2()
+    modificacionArchivo3()
+    modificacionArchivo4()
+    modificacionArchivo5()
+    modificacionArchivo6()
+    modificacionArchivo7()
+    descargaArchivoModificado()
 
 def dataSinModificacion(url, ruta):
     try:
@@ -20,6 +31,11 @@ def dataSinModificacion2(url, ruta):
     except:
         print (f"Hubo un error en: {url}")
         print ("Código error: "+str(e))
+
+def lecturaFuente():
+    fuente = pd.read_excel(r"C:\Users\gusti\grafico_prueba\Descargas_1.xlsx")
+    for i in range (len(fuente)):
+    dataSinModificacion(fuente["URL"][i],fuente["ruta"][i])
 
 def modificacionArchivo1():
     dfDato7 = pd.read_csv(r"http://www.cplt.cl/transparencia_activa/datoabierto/archivos/TA_Otras_transferencias.csv", encoding = "ISO-8859-1", sep=";")
@@ -220,50 +236,6 @@ def descargaArchivoModificado():
         dfAuxiliar.to_excel(f'TA/solicitudes_por_estado_360_{str(i)}.xlsx', index = False)
 
 
-def descargar():
-    dataSinModificacion("http://www.cplt.cl/transparencia_activa/datoabierto/archivos/TA_Otras_autoridades.csv", "TA/TA_Otras_autoridades.xlsx")
-    dataSinModificacion("http://www.cplt.cl/transparencia_activa/datoabierto/archivos/TA_PasivosMunicipio.csv", "TA/TA_PasivosMunicipio.xlsx")
-    dataSinModificacion("http://www.cplt.cl/transparencia_activa/datoabierto/archivos/TA_PasivosMunicipio.csv", "TA/TA_PasivosMunicipio.xlsx")
-    dataSinModificacion("http://www.cplt.cl/transparencia_activa/datoabierto/archivos/TA_ActosDocPublicadosenDO.csv", "TA/TA_ActosDocPublicadosenDO.xlsx")
-    dataSinModificacion("http://www.cplt.cl/transparencia_activa/datoabierto/archivos/TA_Potestades_otras.csv", "TA/TA_Potestades_otras.xlsx")
-    dataSinModificacion("http://www.cplt.cl/transparencia_activa/datoabierto/archivos/TA_Marco_normativo.csv", "TA/TA_Marco_normativo.xlsx")
-    dataSinModificacion("http://www.cplt.cl/transparencia_activa/datoabierto/archivos/TA_Facultades_funciones_atribuciones.csv", "TA/TA_Facultades_funciones_atribuciones.xlsx")
-    dataSinModificacion("http://www.cplt.cl/transparencia_activa/datoabierto/archivos/TA_Tramites_ante_consejo.csv", "TA/TA_Tramites_ante_consejo.xlsx")
-    dataSinModificacion("http://www.cplt.cl/transparencia_activa/datoabierto/archivos/TA_ParticipacionCiudadana.csv", "TA/TA_ParticipacionCiudadana.xlsx")
-    dataSinModificacion("http://www.cplt.cl/transparencia_activa/datoabierto/archivos/TA_Auditorias.csv", "TA/TA_Auditorias.xlsx")
-    dataSinModificacion(r"http://www.cplt.cl/transparencia_activa/datoabierto/archivos/TA_Subsidios_beneficios_intermediarios.csv", "TA/TA_Subsidios_beneficios_intermediarios.xlsx")
-    dataSinModificacion(r"http://www.cplt.cl/transparencia_activa/datoabierto/archivos/TA_Subsidios_beneficios.csv", "TA/TA_Subsidios_beneficios.xlsx")
-    dataSinModificacion(r"http://www.cplt.cl/transparencia_activa/datoabierto/archivos/TA_Otras_autoridades.csv", "TA/TA_Otras_autoridades.xlsx")
-    dataSinModificacion(r"http://www.cplt.cl/transparencia_activa/datoabierto/archivos/TA_Licitaciones.csv", "TA/TA_Licitaciones.xlsx")
-    dataSinModificacion(r"http://www.cplt.cl/transparencia_activa/datoabierto/archivos/Organismos_360.csv", "TA/Organismos_360.xlsx")
-    dataSinModificacion(r"http://www.consejotransparencia.cl/transparencia_activa/datoabierto/archivos/casos.csv", "TA/ConsejoTransparencia_casos.xlsx")
-    dataSinModificacion(r"http://www.consejotransparencia.cl/transparencia_activa/datoabierto/archivos/estadosPorCaso.csv", "TA/ConsejoTransparencia_estadosPorCaso.xlsx")
-    dataSinModificacion(r"http://www.consejotransparencia.cl/transparencia_activa/datoabierto/archivos/motivosPorCaso.csv", "TA/ConsejoTransparencia_motivosPorCaso.xlsx")
-    dataSinModificacion(r"http://www.consejotransparencia.cl/transparencia_activa/datoabierto/archivos/notificaciones.csv", "TA/ConsejoTransparencia_notificaciones.xlsx")
-    dataSinModificacion2(r"http://www.cplt.cl/transparencia_activa/datoabierto/archivos/Tipologias%20y%20Asignaciones%20Especiales.xlsx", "TA/Asignaciones_Especiales.xlsx")
-    dataSinModificacion(r"http://www.cplt.cl/transparencia_activa/datoabierto/archivos//TA_Marco_normativo.csv", "TA/TA_Marco_normativo.xlsx")
-    dataSinModificacion(r"http://www.cplt.cl/transparencia_activa/datoabierto/archivos/PP0002.csv", "PP/PP0002.xlsx")
-    dataSinModificacion(r"http://www.cplt.cl/transparencia_activa/datoabierto/archivos/PP0003.csv", "PP/PP0003.xlsx")
-    dataSinModificacion(r"http://www.cplt.cl/transparencia_activa/datoabierto/archivos/PP0004.csv", "PP/PP0004.xlsx")
-    dataSinModificacion(r"http://www.cplt.cl/transparencia_activa/datoabierto/archivos/PP0005.csv", "PP/PP0005.xlsx")
-    dataSinModificacion(r"http://www.cplt.cl/transparencia_activa/datoabierto/archivos/PP0006.csv", "PP/PP0006.xlsx")
-    dataSinModificacion(r"http://www.cplt.cl/transparencia_activa/datoabierto/archivos/PP0007.csv", "PP/PP0007.xlsx")
-    dataSinModificacion(r"http://www.cplt.cl/transparencia_activa/datoabierto/archivos/PP0008.csv", "PP/PP0008.xlsx")
-    dataSinModificacion(r"http://www.cplt.cl/transparencia_activa/datoabierto/archivos/PP0009.csv", "PP/PP0009.xlsx")
-    dataSinModificacion(r"http://www.cplt.cl/transparencia_activa/datoabierto/archivos/PP00010.csv", "PP/PP00010.xlsx")
-    dataSinModificacion(r"http://www.cplt.cl/transparencia_activa/datoabierto/archivos/PP00011.csv", "PP/PP00011.xlsx")
-    dataSinModificacion(r"http://www.cplt.cl/transparencia_activa/datoabierto/archivos/PP00012.csv", "PP/PP00012.xlsx")
-    dataSinModificacion(r"http://www.cplt.cl/transparencia_activa/datoabierto/archivos/PP00013.csv", "PP/PP00013.xlsx")
-    dataSinModificacion(r"http://www.cplt.cl/transparencia_activa/datoabierto/archivos/PP00014.csv", "PP/PP00014.xlsx")
-    dataSinModificacion(r"http://www.cplt.cl/transparencia_activa/datoabierto/archivos/PP00015.csv", "PP/PP00015.xlsx")
-    dataSinModificacion(r"http://www.cplt.cl/transparencia_activa/datoabierto/archivos/PP00016.csv", "PP/PP00016.xlsx")
-    dataSinModificacion(r"http://www.cplt.cl/transparencia_activa/datoabierto/archivos/PP00017.csv", "PP/PP00017.xlsx")
-    dataSinModificacion(r"http://www.cplt.cl/transparencia_activa/datoabierto/archivos/PP00018.csv", "PP/PP00018.xlsx")
-    dataSinModificacion(r"http://www.cplt.cl/transparencia_activa/datoabierto/archivos/PP00019.csv", "PP/PP00019.xlsx")
-    dataSinModificacion(r"http://www.cplt.cl/transparencia_activa/datoabierto/archivos/PP00020.csv", "PP/PP00020.xlsx")
-    dataSinModificacion(r"http://www.cplt.cl/transparencia_activa/datoabierto/archivos/PP00021.csv", "PP/PP00021.xlsx")
-    dataSinModificacion(r"http://www.cplt.cl/transparencia_activa/datoabierto/archivos/reclamados.csv", "TA/reclamados.xlsx")
-    dataSinModificacion(r"http://www.cplt.cl/transparencia_activa/datoabierto/archivos/reclamantes.csv", "TA/reclamantes.xlsx")
 
 
 if __name__ == '__main__':
