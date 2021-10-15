@@ -140,6 +140,8 @@ def descargas():
 
 if __name__ == '__main__':
     #general()
+    import os
+    print(os.getcwd())
     print("Aqui estamos comenzando")
     f = open ('Test/HolaMundo.txt','w')
     f.write('hola mundo')
