@@ -1,4 +1,4 @@
-'''
+
 import pandas as pd
 import time
 import requests
@@ -17,32 +17,32 @@ def general():
     descargas()
 
 def lecturaArchivos():
-    df1996 = pd.read_excel(r"C:\Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_1996.xlsx")
-    df1997 = pd.read_excel(r"C:\Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_1997.xlsx")
-    df1998 = pd.read_excel(r"C:\Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_1998.xlsx")
-    df1999 = pd.read_excel(r"C:\Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_1999.xlsx")
-    df2000 = pd.read_excel(r"C:\Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2000.xlsx")
-    df2001 = pd.read_excel(r"C:\Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2001.xlsx")
-    df2002 = pd.read_excel(r"C:\Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2002.xlsx")
-    df2003 = pd.read_excel(r"C:\Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2003.xlsx")
-    df2004 = pd.read_excel(r"C:\Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2004.xlsx")
-    df2005 = pd.read_excel(r"C:\Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2005.xlsx")
-    df2006 = pd.read_excel(r"C:\Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2006.xlsx")
-    df2007 = pd.read_excel(r"C:\Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2007.xlsx")
-    df2008 = pd.read_excel(r"C:\Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2008.xlsx")
-    df2009 = pd.read_excel(r"C:\Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2009.xlsx")
-    df2010 = pd.read_excel(r"C:\Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2010.xlsx")
-    df2011 = pd.read_excel(r"C:\Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2011.xlsx")
-    df2012 = pd.read_excel(r"C:\Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2012.xlsx")
-    df2013 = pd.read_excel(r"C:\Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2013.xlsx")
-    df2014 = pd.read_excel(r"C:\Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2014.xlsx")
-    df2015 = pd.read_excel(r"C:\Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2015.xlsx")
-    df2016 = pd.read_excel(r"C:\Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2016.xlsx")
-    df2017 = pd.read_excel(r"C:\Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2017.xlsx")
-    df2018 = pd.read_excel(r"C:\Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2018.xlsx")
-    df2019 = pd.read_excel(r"C:\Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2019.xlsx")
-    df2020 = pd.read_excel(r"C:\Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2020.xlsx")
-    df2021 = pd.read_excel(r"C:\Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2021.xlsx")
+    df1996 = pd.read_excel(r"Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_1996.xlsx")
+    df1997 = pd.read_excel(r"Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_1997.xlsx")
+    df1998 = pd.read_excel(r"Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_1998.xlsx")
+    df1999 = pd.read_excel(r"Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_1999.xlsx")
+    df2000 = pd.read_excel(r"Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2000.xlsx")
+    df2001 = pd.read_excel(r"Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2001.xlsx")
+    df2002 = pd.read_excel(r"Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2002.xlsx")
+    df2003 = pd.read_excel(r"Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2003.xlsx")
+    df2004 = pd.read_excel(r"Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2004.xlsx")
+    df2005 = pd.read_excel(r"Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2005.xlsx")
+    df2006 = pd.read_excel(r"Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2006.xlsx")
+    df2007 = pd.read_excel(r"Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2007.xlsx")
+    df2008 = pd.read_excel(r"Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2008.xlsx")
+    df2009 = pd.read_excel(r"Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2009.xlsx")
+    df2010 = pd.read_excel(r"Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2010.xlsx")
+    df2011 = pd.read_excel(r"Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2011.xlsx")
+    df2012 = pd.read_excel(r"Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2012.xlsx")
+    df2013 = pd.read_excel(r"Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2013.xlsx")
+    df2014 = pd.read_excel(r"Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2014.xlsx")
+    df2015 = pd.read_excel(r"Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2015.xlsx")
+    df2016 = pd.read_excel(r"Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2016.xlsx")
+    df2017 = pd.read_excel(r"Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2017.xlsx")
+    df2018 = pd.read_excel(r"Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2018.xlsx")
+    df2019 = pd.read_excel(r"Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2019.xlsx")
+    df2020 = pd.read_excel(r"Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2020.xlsx")
+    df2021 = pd.read_excel(r"Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2021.xlsx")
 
 def modificacionArchivo1():
     df1996["Año"] = "1996"
@@ -136,14 +136,14 @@ def descargas():
     modificacionArchivo8()
     modificacionArchivo9()
 
-'''
+
 
 if __name__ == '__main__':
-    #general()
-    import os
-    print(os.getcwd())
-    print("Aqui estamos comenzando")
-    f = open ('Test/HolaMundo.txt','w')
-    f.write('hola mundo')
-    f.close()
-    print("Aqui terminamos")
+    general()
+    #import os
+    #print(os.getcwd())
+    #print("Aqui estamos comenzando")
+    #f = open ('Test/HolaMundo.txt','w')
+    #f.write('hola mundo')
+    #f.close()
+    #print("Aqui terminamos")
