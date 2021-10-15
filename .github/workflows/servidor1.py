@@ -40,7 +40,7 @@ def lecturaArchivos():
     df2017 = pd.read_excel(r"C:\Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2017.xlsx")
     df2018 = pd.read_excel(r"C:\Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2018.xlsx")
     df2019 = pd.read_excel(r"C:\Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2019.xlsx")
-    df2020 = pd.read_excel(r"C:\Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2020.xlsx.xlsx")
+    df2020 = pd.read_excel(r"C:\Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2020.xlsx")
     df2021 = pd.read_excel(r"C:\Carteras históricas de Inversión de los Fondos de Pensiones\cartera_mensual_2021.xlsx")
 
 def modificacionArchivo1():
