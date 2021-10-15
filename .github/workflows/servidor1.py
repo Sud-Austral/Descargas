@@ -1,3 +1,4 @@
+'''
 import pandas as pd
 import time
 import requests
@@ -135,7 +136,7 @@ def descargas():
     modificacionArchivo8()
     modificacionArchivo9()
 
-
+'''
 
 if __name__ == '__main__':
     #general()
